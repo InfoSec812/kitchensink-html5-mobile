@@ -86,6 +86,26 @@
         </dependencies>
     </dependencyManagement>
 
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://nexus-labs-ci-cd.apps.s9.core.rht-labs.com/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <url>http://nexus-labs-ci-cd.apps.s9.core.rht-labs.com/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
     <dependencies>
         <!-- First declare the APIs we depend on and need for compilation. All of them are provided by JBoss -->
 
@@ -202,7 +222,7 @@
                <artifactId>maven-surefire-plugin</artifactId>
                <version>${version.surefire.plugin}</version>
                <configuration>
-                   <skip>true</skip>
+                   <skip>false</skip>
                </configuration>
             </plugin>
         </plugins>
