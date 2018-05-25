@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-node('redhatdistortion-maven') {
+node('jenkins-slave-mvn') {
     stage 'Checkout'
     checkout scm
 
